@@ -73,12 +73,12 @@ h1 {
 
 .hangman {
   position: relative;
-  margin-top: 55 px;
-  width: 380px;
+  /* margin-top: 50px; */
+  width: 290px;
 }
 
 .top-block {
-  width: 320px;
+  width: 248px;
   height: 30px;
   background: black;
   position: absolute;
@@ -162,23 +162,22 @@ h1 {
 .word {
   margin-top:30px;
   background: rgb(4, 108, 149);
-  padding: 10px 25px 10px;
+  padding: 10px 25px 20px;
   border-radius: 10px;
   font-size: 2rem;
+  display: flex;
 }
 
-.word span {
+.word div {
+  width: 20px;
   margin-left: 20px;
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: center;
 }
 
-/* .word span:before{
-  content: "";
-  width: 25px;
-  height: 40px;
-  background: white;
-  position: absolute;
-} */
 
-.word span:nth-child(1) {
+
+.word div:nth-child(1) {
   margin: 0;
 }
