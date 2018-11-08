@@ -15,24 +15,37 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
 h1 {
   letter-spacing: 3px;
-  margin-top: 30px;
+  background: rgb(4, 108, 149);
   font-size: 3rem;
+  padding: 10px 20px 15px;
+  border-radius: 0 0 20px 20px;
+}
+
+.main{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 30px;
 }
 
 .letters {
-  margin-top: 30px;
   display: flex;
   font-size: 1.5rem;
   color: black;
   flex-wrap: wrap;
   font-weight: bold;
-  width: 70%;
+  width: 38%;
+  background: rgb(4, 108, 149);
+  border-radius: 20px;
+  padding: 15px;
+
+  /* justify-content: space-between; */
 }
 
 .letters div {
@@ -61,7 +74,7 @@ h1 {
 
 .hangman {
   position: relative;
-  margin-top: 30px;
+  margin-top: 55 px;
   width: 380px;
 }
 
@@ -126,4 +139,24 @@ h1 {
 }
 .arm-right{
   left: 115px;
+}
+
+.leg {
+  background: black;
+  width: 25px;
+  height: 85px;
+  border-radius: 20px;
+  position: absolute;
+  top: 190px;
+  border: 2px solid rgb(5, 153, 212);
+}
+.leg-left{
+    left: 67px;
+}
+.leg-right{
+  left: 99px;
+}
+
+.word{
+  
 }
