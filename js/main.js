@@ -1,6 +1,19 @@
 /*jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function(event) {
 
+my = [];
+  fetch("https://my-json-server.typicode.com/grzegorzeryks/hangman_game/animals")
+    .then(res => res.json())
+    .then(res => {
+      for (var i = 0; i < res.length; i++) {
+        my.push(res[i]);
+      }
+      console.log(my);
+    });
+
+
+console.log(my);
+
   let words = ['dog', 'cat', 'mouse', 'highway', 'fourty', 'seven', 'bubble'];
   let word = document.querySelector('.word');
   let letters = document.querySelectorAll('.letters div');
@@ -48,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }
   }
-// Adding checkLetter to all letter buttons/divs
+  // Adding checkLetter to all letter buttons/divs
   for (let i = 0; i < letters.length; i++) {
     letters[i].addEventListener('click', checkLetter);
   }
