@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let letters = document.querySelectorAll('.letters div');
   let clickSound = new Audio('snd/click.mp3');
   let newestArray;
-
+  let bodyCounter = 0;
   //Function that randomly chooses an item from an array and splits it into new array and creates html elements
   function randomWord() {
     let randomNr = Math.floor(Math.random() * words.length);
@@ -25,29 +25,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
   randomWord();
   console.log(newestArray);
   let wordElements = document.querySelectorAll('.word div span');
+  let hangmanBody = document.querySelectorAll('.hangman-body div');
 
   //function checking letters
   function checkLetter() {
     clickSound.play();
     let isThere = false;
-    let letterNr = 0;
+
     for (var i = 0; i < newestArray.length; i++) {
       if (newestArray[i] === this.className) {
         isThere = true;
-        letterNr = i;
         wordElements[i].style.display = "block";
       }
     }
     if (!isThere) {
-      console.log('nie ma');
-    } else {
-      console.log('jest');
+      if (bodyCounter <= 6) {
+        for (var i = 0; i < hangmanBody.length; i++) {
+          hangmanBody[bodyCounter].style.display = "block";
+          console.log(bodyCounter);
+          bodyCounter += 1;
+          return;
+        }
+      }
     }
   }
-
+// Adding checkLetter to all letter buttons/divs
   for (var i = 0; i < letters.length; i++) {
     letters[i].addEventListener('click', checkLetter);
   }
-
 
 });

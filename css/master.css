@@ -99,6 +99,7 @@ h1 {
   background: rgb(54, 52, 52);
   position: absolute;
   left: 90px;
+  display: none;
 }
 
 .head {
@@ -109,8 +110,9 @@ h1 {
   position: absolute;
   left: 70px;
   top: 53px;
-  border: 2px solid  rgb(232,144,12);
+  border: 2px solid rgb(232, 144, 12);
   z-index: 1;
+  display: none;
 }
 
 .torso {
@@ -121,7 +123,8 @@ h1 {
   position: absolute;
   left: 67px;
   top: 100px;
-    border: 2px solid rgb(232,144,12);
+  border: 2px solid rgb(232, 144, 12);
+  display: none;
 }
 
 .arm {
@@ -131,15 +134,17 @@ h1 {
   border-radius: 20px;
   position: absolute;
   top: 105px;
-  border: 2px solid rgb(232,144,12);
+  border: 2px solid rgb(232, 144, 12);
 }
 
 .arm-left {
   left: 56px;
+  display: none;
 }
 
 .arm-right {
   left: 115px;
+  display: none;
 }
 
 .leg {
@@ -149,19 +154,21 @@ h1 {
   border-radius: 20px;
   position: absolute;
   top: 190px;
-  border: 2px solid rgb(232,144,12);
+  border: 2px solid rgb(232, 144, 12);
 }
 
 .leg-left {
   left: 67px;
+  display: none;
 }
 
 .leg-right {
   left: 99px;
+  display: none;
 }
 
 .word {
-  margin-top:30px;
+  margin-top: 30px;
   background: rgb(4, 108, 149);
   padding: 10px 25px 20px;
   border-radius: 10px;
@@ -178,12 +185,10 @@ h1 {
   height: 50px;
 }
 
-
-
 .word div:nth-child(1) {
   margin: 0;
 }
 
 .word div span {
-  display:none;
+  display: none;
 }
