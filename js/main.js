@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let randomNr = Math.floor(Math.random() * words.length);
     let randomArray = words[randomNr].split('');
 
-    for (var i = 0; i < randomArray.length; i++) {
+    for (let i = 0; i < randomArray.length; i++) {
       let newBox = document.createElement('div');
       let newWord = document.createElement('span');
       newWord.innerText = randomArray[i].toUpperCase();
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     clickSound.play();
     let isThere = false;
 
-    for (var i = 0; i < newestArray.length; i++) {
+    for (let i = 0; i < newestArray.length; i++) {
       if (newestArray[i] === this.className) {
         isThere = true;
         wordElements[i].style.display = "block";
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     if (!isThere) {
       if (bodyCounter <= 6) {
-        for (var i = 0; i < hangmanBody.length; i++) {
+        for (let i = 0; i < hangmanBody.length; i++) {
           hangmanBody[bodyCounter].style.display = "block";
           bodyCounter += 1;
           return;
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 // Adding checkLetter to all letter buttons/divs
-  for (var i = 0; i < letters.length; i++) {
+  for (let i = 0; i < letters.length; i++) {
     letters[i].addEventListener('click', checkLetter);
   }
 
