@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       if (bodyCounter <= 6) {
         for (var i = 0; i < hangmanBody.length; i++) {
           hangmanBody[bodyCounter].style.display = "block";
-          console.log(bodyCounter);
           bodyCounter += 1;
           return;
         }
