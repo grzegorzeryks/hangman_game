@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function(event) {
 
-  let words = ['dog', 'cat', 'mouse', 'highway', 'fourty', 'seven', 'bubble'];
+  let words = ["dog", "cat","horse","mouse","elephant","crocodile","eagle","pig","cow","monkey","hippotoamus","weasel","deer","frog","lizzard","snake","dinosaur","ape","wolf","lion","tiger","chicken","tarantula"];
   let word = document.querySelector('.word');
   let letters = document.querySelectorAll('.letters div');
   let clickSound = new Audio('snd/click.mp3');
