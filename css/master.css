@@ -196,7 +196,6 @@ h1 {
 .game-over {
   padding: 10px 20px;
   background: rgb(175, 7, 7);
-  margin-top: 20px;
   border-radius: 20px;
   display: none;
   font-size: 2rem;
@@ -206,13 +205,17 @@ h1 {
 
 .reset {
   padding: 10px 20px;
-  position: absolute;
-  left: 40px;
-  bottom: 112px;
-  float: left;
   font-size: 2rem;
   background: rgb(175, 7, 7);
   border-radius: 20px;
   display: none;
   cursor: pointer;
+}
+
+.finish-container {
+  display: flex;
+  margin-top: 20px;
+  padding:0 20px;
+  justify-content: space-around;
+  width: 30%;
 }
