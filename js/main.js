@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   console.log(newestArray);
   let wordElements = document.querySelectorAll('.word div span');
   let hangmanBody = document.querySelectorAll('.hangman-body div');
-
+console.log(wordElements);
   //function checking letters
   function checkLetter() {
     clickSound.play();
@@ -37,18 +37,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     for (let i = 0; i < newestArray.length; i++) {
       if (newestArray[i] === this.className) {
         isThere = true;
-        wordElements[i].style.display = "block";
+        wordElements[i].style.display = 'block';
         winCounter += 1;
         if (winCounter === newestArray.length) {
           gameOver.innerText = 'YOU WIN !';
           gameOver.style.display = 'flex';
+          // setTimeout(function(){ reset(); }, 3000);
         }
       }
     }
     if (!isThere) {
       if (bodyCounter <= 6) {
         for (let i = 0; i < hangmanBody.length; i++) {
-          hangmanBody[bodyCounter].style.display = "block";
+          hangmanBody[bodyCounter].style.display = 'block';
           bodyCounter += 1;
 
           if (bodyCounter > 6) {
@@ -60,6 +61,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }
   }
+function reset(){
+  gameOver.style.display = "none";
+  location.reload();
+}
+
+
   // Adding checkLetter function to all letter buttons/divs
   for (let i = 0; i < letters.length; i++) {
     letters[i].addEventListener('click', checkLetter);
