@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let bodyCounter = 0;
   let winCounter = 0;
   let gameOver = document.querySelector('.game-over');
+  let reset = document.querySelector('.reset');
   //Function that randomly chooses an item from an array and splits it into new array and creates html elements
   function randomWord() {
     let randomNr = Math.floor(Math.random() * words.length);
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   console.log(newestArray);
   let wordElements = document.querySelectorAll('.word div span');
   let hangmanBody = document.querySelectorAll('.hangman-body div');
-console.log(wordElements);
+  console.log(wordElements);
   //function checking letters
   function checkLetter() {
     clickSound.play();
@@ -42,7 +43,7 @@ console.log(wordElements);
         if (winCounter === newestArray.length) {
           gameOver.innerText = 'YOU WIN !';
           gameOver.style.display = 'flex';
-          // setTimeout(function(){ reset(); }, 3000);
+          reset.style.display = 'block';
         }
       }
     }
@@ -55,16 +56,15 @@ console.log(wordElements);
           if (bodyCounter > 6) {
             gameOver.innerText = 'GAME OVER !';
             gameOver.style.display = 'flex';
+            reset.style.display = 'block';
           }
           return;
         }
       }
     }
   }
-function reset(){
-  gameOver.style.display = "none";
-  location.reload();
-}
+
+reset.addEventListener('click', function(){  location.reload();} );
 
 
   // Adding checkLetter function to all letter buttons/divs
